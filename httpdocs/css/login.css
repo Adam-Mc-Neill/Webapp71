@@ -1,0 +1,231 @@
+
+
+.eb1{
+	margin: 0;
+	padding: 0;
+}
+
+.eb{
+	display: none;
+	position:relative;
+	background-color: white;
+	color:	black;
+	box-sizing: border-box;
+	width: 280px;
+	left: 27rem;
+	bottom: 215px;
+	padding: 8px 20px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 0px;
+	border-color: black;
+	font-size: 11.5px;
+	text-align: left;
+	font-family: "Segoe UI";
+	opacity: 0.7;
+	margin-left: auto;
+}
+
+
+.d1 {
+	padding-top: 4rem;
+}
+
+.d2{
+	background-color: white;
+	padding: 0 !important;
+	padding-bottom: 3rem !important; 
+	border-radius: 2px;
+}
+
+.invis{
+	display:none;
+}
+
+.d3{
+	padding:0rem !important;
+	font-size: 1.2rem;
+	margin:0.7rem 1.2rem !important;
+	margin-bottom: 2.7rem !important;
+	border-width:0.15rem;
+	border-color: white;
+	border-style:solid;
+	border-radius: 4px;
+}
+
+.dfocus{
+	background-color: #2EAAA8;
+}
+.dfocus2{
+		color: white !important ;
+}
+
+.d4{
+	display:inline-block !important;
+	width: 100%;
+	border-radius: 5px;
+	padding: 0;
+}
+
+.d5{
+	display:inline-block !important;
+	width: 50%;
+	vertical-align: middle;
+	padding: 0.3rem 2rem;
+}
+
+
+.pointer{
+
+  cursor: pointer;
+ 
+}
+
+.f1{
+	padding: 0 3rem !important;
+}
+
+
+
+.trans{
+	  transition:.5s ease;
+}
+
+
+/* Navbar Styles  */
+
+.navbar { 
+  margin-bottom: 0;  
+} 
+ 
+.bg-blue { 
+  background-color: #2f3542; 
+} 
+
+body  { 
+  margin-top: 50px; 
+  background-color: #575761
+}
+ 
+.text-upper { 
+  text-transform: uppercase; 
+} 
+ 
+.nav-brand { 
+  color: #ced6e0; 
+  font-weight: 700; 
+  margin-right: 80px; 
+  margin-left: 20px; 
+} 
+
+
+/* Button styles (& hover animation)  */
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2EAAA8;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 0.5rem 0.4rem;
+  width: 15rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+/* alert Styling */
+
+.alert-area {
+  max-height: 100%;
+  position: fixed;
+  bottom: 32px;
+  width: 100%;
+}
+
+.alert-box {
+  font-size: 16px;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  line-height: 1.3em;
+  padding: 10px 15px;
+  position: relative;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in;
+  background-color: #2f3542;
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  width: 55%;
+}
+
+.alert-box.hide {
+  opacity: 0;
+}
+
+.alert-close {
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.alert-close:before,
+.alert-close:after {
+  content: '';
+  width: 15px;
+  border-top: solid 2px white;
+  position: absolute;
+  top: 5px;
+  right: -1px;
+  display: block;
+}
+
+.alert-close:before {
+  transform: rotate(45deg);
+}
+
+.alert-close:after {
+  transform: rotate(135deg);
+}
+
+.alert-close:hover:before,
+.alert-close:hover:after {
+  border-top: solid 2px #d8d8d8;
+}
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/PlayGame.css">
+    
+    <title>Help</title>
+  
+  <body>
+    {{nav}}
+
+    <main role="main">
+      <div class="container-fluid help">
+        <div class="row text-center">
+          <div class="col">
+            <h1>Check Your Code</h1>
+            <form>
+              <textarea class="form-control" id="code-textarea" rows="3"></textarea><br>
+              <div id="success"></div>
+              <button type="submit" onclick="check_code();return false;" class="btn btn-dark mb-2">Submit</button>
+            </form>
+          </div>
+        </div><hr/>
+        
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center">Getting Started</h1>
+            <p>The basic principle of creating games at Adventure 71 is centered around what we call "routes".<br>
+            A game is generally divided into different routes and the route that a player takes to reach the end can change depending on the choices they make.<br>
+            As a result, a plythrough can be simply visualised as a sequence of routes that the player takes, eg.
+            <code>start -> good1 -> good2 -> bad3 -> good end</code> OR <code>start -> good1 -> bad2 -> bad3 -> something else -> different ending</code>.<br></p>
+            
+            <h3 class="text-center">The `start` route</h3>
+            <p>The most important route is the <code>start</code> route. All games must have at least the start route and this is the main entry point where games begin.<br>
+            To create a start route, or any route for that matter, we can use the <code>route</code> and <code>end</code> commands to create a route and end it respectively. For example:
+            <pre><code>route: start<br>...<br>end: start<br><br>route: example<br>...<br>end: example</code></pre><br>Here we create two routes, "start" and "example"<br>
+            Note that routes can be called whatever you want, so long as there is one start route and all routes are closed with the <code>end</code> command.</p>
+            
+            <h3 class="text-center">The `text` command</h3>
+            <p>In order to actually have a playable game we need to support some sort of logic within routes, right?<br>
+            The most basic logic that you will need to create an adventure game, is the ability to print text to the screen. We do this with the <code>text</code> command.<br>
+            <pre><code>route: start<br>text: Hello there<br>text: How are you?<br>end: start</code></pre><br>
+            This is quite a mimial example. We start as always by defining a `start` route but this time we have some extra commands within the route.<br>
+            The `text` command simply prints whatever text you give it to the screen. Please note that if you do not specify any choices after using a text command, we will automatically create an implicit choice for you.<br>
+            This choice will simply allow the user to advance further in the game. This means that each individual `text` command is interactive, and in order to get from one to the next, user input is needed.</p>
+            
+            <h3 class="text-center">Images</h3>
+            <p>In addition to printing text, you can also change the background image of the game at any time. Simply use the <code>image</code> command and provide a url to the image you want to use
+            <pre><code>route: start<br>image: https://www.yourwebsite/image.png<br>text: How are you?<br>end: start</code></pre><br>That's it!</p>
+            
+            <h3 class="text-center">Choices</h3>
+            <p>Now, the most complex and most important part of the game engine - user choices, ie. real interactivity!<br>
+            The basic syntax for providing the user with a choice is as follows <code>choice: choice_type | args | ... ~ choice_type | args | ... ~ ...</code><br>
+            To break it down a bit, each choice has a type and each type does something different when clicked on - <code>continue</code> simply continues through the game as normal, <code>divert</code> jumps to a different route, <code>speak</code> prints text and continues as normal.<br>
+            Each choice type can take one or many arguments, separated by a pipe (|) and each <code>choice</code> command can take multiple choices, separated by a tilde (~).<br>
+            <pre><code>choice: continue | choice text<br>choice: divert | route to divert to | choice text<br>choice: speak | text to print when clicked on | choice text</code></pre><br>An example:<br>
+            <code>choice: continue | '"This choice should just continue normally'"" ~ divert | test's"a | this 'diverts to a different route"" ~ speak | "text"| this just prints "text"</code></p>
+            
+            <h3 class="text-center">Putting it all together</h3>
+            <pre><code>route: start<br>text: Hello there.<br>text: This a sample test.<br>text: "Quotes" 'Should' '"work'".<br>text: Some more text<br>choice: continue | '"This choice should just continue normally'"" ~ divert | test's"a | this 'diverts to a different route"" ~ speak | "text"| this just prints "text"<br>end: start<br><br>route: test's"a<br>text: It Works!<br>end: test's"a</code></pre>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
+	
+	<script>
+  function callback(xmlhttp) {
+    success = document.getElementById("success");
+    if (xmlhttp.response == "ok") {
+      success.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">Your code works!<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+    } else {
+      success.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' + xmlhttp.response + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+    }
+  }
+  
+  function check_code() {
+    if (window.XMLHttpRequest) {
+       // code for modern browsers
+       xmlhttp = new XMLHttpRequest();
+     } else {
+       // code for old IE browsers
+       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xmlhttp.onreadystatechange = function () {if (this.readyState == 4 && this.status == 200) callback(this);};
+    code = document.getElementById("code-textarea").value; 
+    xmlhttp.open('POST', '/check_code', true);
+    xmlhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xmlhttp.send($.param(
+      {
+        'code': code
+      }
+    ));
+  }
+  </script>
+	
+  </body>
+</html>

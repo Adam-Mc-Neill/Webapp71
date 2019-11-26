@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/PlayGame.css">
+    
+    <title>Publish Game</title>
+  
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top text-upper">
+      <a class="navbar-brand nav-brand" href="#">A.71</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Publish</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Create Account</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+    
+      <div class="container-fluid">
+      
+        <div class="row justify-content-center">
+          <div class="col game img-overlay">
+             <form action="/lab6-write">
+             
+              <div class="form-group">
+                <label for="title">Game Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="desc">Game Description:</label>
+                <input type="text" class="form-control" id="desc" name="desc" required>
+              </div>
+  
+              <div class="form-group">
+                <label for="game-code">Game Code:</label>
+                <textarea class="form-control" id="game-code" rows="5" name="game-code" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Publish</button>
+            </form> 
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

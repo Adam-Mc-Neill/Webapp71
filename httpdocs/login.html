@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.2.1.css" type="text/css">
+  <link rel="stylesheet" href="../css/login.css" >
+  <title>A.71  | Login/Signup</title>	
+  <script type="text/javascript" src="../js/login.js" ></script>  
+  <script type="text/javascript" id="js1"> </script>
+</head>
+
+<body>
+	{{nav}}
+  <div class=" text-center d1">
+    <div class="container">	
+      <div class="row  invis" id="signupbox">
+        <div class="mx-auto col-md-6 col-10 p-5 d2">
+		  <div class=" navbar navbar-expand-md navbar-dark bg-blue text-upper navbar-collapse d3">
+			<ul class="navbar-nav mr-auto p9 d4">
+				<li class="nav-item d5" >
+					<span class="nav-link pointer trans"  id="sign" onclick="switchToLogin();">Login</span>
+				</li><!--this comment stops the whitespace error between the two li elements
+			--><li class="nav-item dfocus d5" >
+					<span class="nav-link pointer dfocus2" >Signup</span>
+				</li>	
+            </ul>		 						
+		  </div>  
+          <form  class="f1" role="form" action="/createaccount.html" method="GET">
+            <div class="form-group"> <input type="usernam" class="form-control" placeholder="Username" id="createUsername" name="username" oninput="checkValidation();" >
+             </div>
+            <div class="form-group mb-3" style="margin-bottom: 2rem !important; margin-top: 1.4rem;	"> <input type="password" class="form-control" placeholder="Password" id="createPassword" name="password" oninput="checkValidation();" > <small class="form-text text-muted text-right">
+             </small> </div> <button type="submit" id="bt1" onclick='asyncLoad1();return false;' class="button"><span>Create Account</span></button>
+          </form>
+        </div>
+      </div>	
+      
+      <div class="eb" id="errorbox">
+		<ul class="eb1">
+			<li id="v1">Username between 3 and 16 characters.</li>
+			<li id="v2">Password at least 5 characters.</li>
+			<li id="v3">Password includes an uppercase letter and a number.</li>
+		</ul>
+		</div>
+        
+      <div class="row" id="loginbox">
+        <div class="mx-auto col-md-6 col-10 p-5 d2" >
+		  <div class=" navbar navbar-expand-md navbar-dark bg-blue text-upper navbar-collapse d3" >
+			<ul class="navbar-nav mr-auto p9 d4" >
+				<li class="nav-item dfocus d5 ">
+					<span class="nav-link pointer dfocus2"  >Login</span>
+				</li><!--this comment stops the whitespace error between the two li elements
+			--><li class="nav-item d5">
+					<span class="nav-link pointer" onclick="switchToSignup();" >Signup</span>
+				</li>	
+            </ul>		 					
+		  </div>  
+          <form class="f1" role="form" action="/loginsubmit.html" method="GET">
+            <div class="form-group"> <input type="usernam" class="form-control" placeholder="Username" id="createUsername2" name="username" > </div>
+            <div class="form-group mb-3" style="margin-bottom: 2rem !important; margin-top: 1.4rem;	"> <input type="password" class="form-control" placeholder="Password" id="createPassword2" name="password" > <small class="form-text text-muted text-right">             
+              </small> </div> <button type="submit"  onclick='asyncLoad2();return false;'  class="button"><span>Log in</span></button>
+          </form>
+        </div>
+      </div>	  	  
+    </div>
+    
+    	<div id="alert-area" class="alert-area" > </div>
+   
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

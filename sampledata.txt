@@ -1,0 +1,160 @@
+testuser
+---------
+testuser
+Password1
+
+
+Sample Game
+------------
+route: start
+text: Hello there. This is a text event. An implicit choice to continue should be automatically added here.
+text: This is sample game to test all feature of the Adventure 71 engine. This is another text event.
+text: The next event is an image event. It should change the background image of this game.
+image: https://4.bp.blogspot.com/-Mv1OtJS5LJ8/VP7i7tpHutI/AAAAAAAAauU/sqeiuCT9R1k/s1600/Image%2B-%2Bman.jpg
+text: Another text event.
+text: "Quotes" 'Should' '"work'". Quotes and special characters should be escaped correctly. '"][+_!@#$%^&*)(?/.,><~`\|
+text: HTML formatting also works.
+text: <b>Bold</b> <i>italic</i>
+choice: continue | Clicking here will just continue execution ~ divert | test's"a | this diverts to a different route ~ speak | "text" | this just prints "text"
+choice: continue | This is here just to test that a choice event can follow another choice event
+text: This is the end of the `start` route.
+end: start
+
+route: test's"a
+text: You are now in a different game route.
+text: It Works!
+text: This is the end of the `test's"a` route.
+end: test's"a
+
+
+Androcles
+----------
+route: start
+image: https://www.bilimseldunya.com/wp-content/uploads/2018/09/Aslan-1-1050x570.jpg
+text: A slave named Androcles once escaped from his master and fled to the forest.
+text: As he was wandering about there he came upon a Lion lying down moaning and groaning.
+text: At first he turned to flee, but finding that the Lion did not pursue him, he turned back and went up to him.
+text: As he came near, the Lion put out his paw, which was all swollen and bleeding, and Androcles found that a huge thorn had got into it, and was causing all the pain.
+text: He pulled out the thorn and bound up the paw of the Lion, who was soon able to rise and lick the hand of Androcles like a dog.
+text: Then the Lion took Androcles to his cave, and every day used to bring him meat from which to live.
+text: But shortly afterwards both Androcles and the Lion were captured, and the slave was sentenced to be thrown to the Lion, after the latter had been kept without food for several days.
+text: The Emperor and all his Court came to see the spectacle, and Androcles was led out into the middle of the arena.
+text: Soon the Lion was let loose from his den, and rushed bounding and roaring towards his victim.
+text: But as soon as he came near to Androcles he recognised his friend, and fawned upon him, and licked his hands like a friendly dog.
+text: The Emperor, surprised at this, summoned Androcles to him, who told him the whole story.
+text: Whereupon the slave was pardoned and freed, and the Lion let loose to his native forest.
+text: Gratitude is the sign of noble souls.
+end: start
+
+
+The Dog and the Wolf
+----------------------
+route: start
+image: https://i1.wp.com/truthaboutpetfood.com/wp-content/uploads/2014/03/j0405024.jpg?resize=1050%2C570&ssl=1
+text: A gaunt Wolf was almost dead with hunger when he happened to meet a House-dog who was passing by.  "Ah, Cousin," said the Dog. "I knew how it would be; your irregular life will soon be the ruin of you.  Why do you not work steadily as I do, and get your food regularly given to you?"
+text: "I would have no objection," said the Wolf, "if I could only get a place."
+text: "I will easily arrange that for you," said the Dog; "come with me to my master and you shall share my work."
+text: So the Wolf and the Dog went towards the town together.  On the way there the Wolf noticed that the hair on a certain part of the Dog's neck was very much worn away, so he asked him how that had come about.
+text: "Oh, it is nothing," said the Dog.  "That is only the place where the collar is put on at night to keep me chained up; it chafes a bit, but one soon gets used to it."
+text: "Is that all?" said the Wolf.  "Then good-bye to you, Master Dog."
+text: Better starve free than be a fat slave.
+end: start
+
+
+A Cup of Tea
+-------------
+route: start
+image: https://upload.wikimedia.org/wikipedia/commons/9/92/Prune_sur_paravent_par_Kan%C5%8D_Sanraku.jpg
+text: Nan-in, a Japanese master during the Meiji era (1868-1912), received a university professor who came to inquire about Zen.
+text: Nan-in served tea. He poured his visitor's cup full, and then kept on pouring.
+text: The professor watched the overflow until he no longer could restrain himself. "It is overfull. No more will go in!"
+text: "Like this cup," Nan-in said, "you are full of your own opinions and speculations. How can I show you Zen unless you first empty your cup?"
+end: start
+
+
+Wisdom 1
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: A bad workman blames his tools.
+end: start
+
+
+Wisdom 2
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: A book holds a house of gold.
+end: start
+
+
+Wisdom 3
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: A book is like a garden carried in the pocket.
+end: start
+
+
+Wisdom 4
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: A child's life is like a piece of paper on which every person leaves a mark.
+end: start
+
+
+Wisdom 5
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: A clever person turns great troubles into little ones and little ones into none at all.
+end: start
+
+
+Wisdom 6
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest.
+end: start
+
+
+Wisdom 7
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: Dig the well before you are thirsty.
+end: start
+
+
+Wisdom 8
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: Give me liberty, or give me death!
+end: start
+
+
+Wisdom 9
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: Life is finite, while knowledge is infinite.
+end: start
+
+
+Wisdom 10
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: Like Weather, one's fortune may change by the evening.
+end: start
+
+
+Wisdom 11
+----------
+route: start
+image: https://i2.wp.com/www.opinza.com/wp-content/uploads/sites/4/2014/10/train-station-night1.jpeg?resize=1050%2C570&ssl=1
+text: To know the road ahead, ask those coming back.
+end: start
